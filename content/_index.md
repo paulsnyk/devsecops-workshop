@@ -1,23 +1,19 @@
 ---
-title: "Snyk and HashiCorp securing your Infrastructure as Code "
+title: "Snyk and AWS - DevSecOps Workshop"
 chapter: true
 weight: 1
 ---
 
-# Snyk and HashiCorp securing your Infrastructure as Code
+# Snyk and AWS - DevSecOps Workshop
 <br>
 ![Snyk Logo](/images/snyk-card.png?width=300px)
-![HashiCorp Logo](/images/HashiCorp_Logo.png?width=300px)  <!-- TODO: ADD YOUR PARTNER LOGO HERE USING THE INSTRUCTIONS BELOW.  Note I resized the Snyk image above -->
 <br>
 
 ## Welcome
 Welcome!
-In this workshop, you will scan and deploy an infrastructure-as-code (IaC) project to Amazon services using Snyk and HashiCorp terraform.  We'll use the CLI and web interfaces for these solutions to identify and fix issues.
+In this workshop you will learn how to deploy AWS services with integrated Snyk application security scanning tools in the Application, Container, and EKS layers while also integrating into CodePipeline.
 
-## HashiCorp
-HashiCorp enables organizations to deliver applications faster with a software stack offering consistent workflows to provision, secure, connect, and run any infrastructure for any application.
-
-HashiCorp Terraform Cloud is the fastest way to adopt Terraform, the world’s most widely used multi-cloud provisioning product. Offered as a service, Terraform Cloud provides everything practitioners, teams, and global businesses need to create and collaborate on infrastructure and manage risks for security, compliance, and operational constraints. 
+We will take running applications which contain vulnerabilites and use the Snyk tools to fix and reploy with the vulnerabilities fixed.
 
 ## Snyk
 Snyk is a Cloud Native Application Security solution that enables developers and security teams to find and automatically fix vulnerabilities in your source code, Infrastructure as code templates, container images, kubernetes applications, and open source artifacts.

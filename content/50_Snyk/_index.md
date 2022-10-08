@@ -1,20 +1,12 @@
 ---
-title: "Module 2: Snyk IaC"
+title: "Module 1: Build the application"
 chapter: true
 weight: 50
 ---
 
 # Snyk 
 
-In this module, we get the code and run some CLI operations with Snyk to find misconfigurations in your Infrastructure as Code definitions.
-
-We will perform these operations:
-
-* Clone a respository with misconfigured Infrastructure as Code assets
-* Run a Snyk CLI scan and observe results
-* Exploit the vulnerability
-* Fix issues locally and re-run scans
-* Send results to the Snyk Website
+In this module we will build our sample application, push its container image to ECS, and deploy the application to Amazon EKS.
 
 # Links of interest
 

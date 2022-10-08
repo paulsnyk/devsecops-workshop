@@ -20,4 +20,4 @@ Consider how many people search online for examples to help them solve an infras
 Development teams strongly prefer to use tooling that includes expert guidance and Easy Buttons such as automatic code completion in an IDE.  IaC security is now available to developers as an Easy Button.
 
 ## Next: The Technical Problem
-In the next section, we provide an overview of HashiCorp and Snyk and how they help people with their Infrastructure As Code projects plus Security.
+In the next section, we provide an overview of Snyk and how we help people with cloud native application security.

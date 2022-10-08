@@ -1,5 +1,5 @@
 ---
-title: "Snyk CLI"
+title: "Snyk"
 chapter: true
 weight: 33
 ---

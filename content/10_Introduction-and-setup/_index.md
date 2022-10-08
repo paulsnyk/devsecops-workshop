@@ -26,12 +26,16 @@ When we scan those resources for vulnerable misconfigurations, we'll also observ
 <br>
 
 - Prerequisites **(15 minutes)**
-- Module 1: Snyk Scanning plus Terraform **(30 minutes)**
-- Module 2: HashiCorp Terraform Cloud plus Snyk Run Tasks **(30 minutes)**
+- Module 1: Build the application  **(30 minutes)**
+- Module 2: Deploying an application to ECS **(30 minutes)**
+- Module 3: Scanning the application for vunlerabilites **(30 minutes)**
+- Module 4: Fixing application vulnerabilities **(30 minutes)**
+- Module 5: Implementing security checking into your DevOps pipeline **(30 minutes)**
+
 
 {{% notice warning %}}
 The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.
 {{% /notice %}}
 
 ### Next Section: Problem Statement
-Next we'll introduce why solving the problem of deploying secure infrastructure is important to you and your team.
+Next we'll introduce why solving the problem of deploying secure applications and infrastructure is important to you and your team.

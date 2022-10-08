@@ -6,9 +6,6 @@ weight: 13
 
 # Who Are We?
 
-## HashiCorp
-At HashiCorp, we believe infrastructure enables innovation, and we are helping organizations to operate that infrastructure in the cloud. Our suite of multi-cloud infrastructure automation products — all with open source projects at their core — underpin the most important applications for the largest enterprises in the world. As part of the once-in-a-generation shift to the cloud, organizations of all sizes, from well-known brands to ambitious start-ups, rely on our solutions to provision, secure, connect, and run their business-critical applications so they can deliver essential services, communications tools, and entertainment platforms worldwide. <br>
-
 ## Snyk
 
 Snyk is the leader in developer security. We empower the world's developers to build secure applications and equip security teams to meet the demands of the digital world. Our developer-first approach ensures organizations can secure all of the critical components of their applications from code to cloud, leading to increased developer productivity, revenue growth, customer satisfaction, cost savings and an overall improved security posture. Snyk's Developer Security Platform automatically integrates with a developer's workflow and is purpose-built for security teams to collaborate with their development teams. Snyk is used by 1,200 customers worldwide today, including industry leaders such as Asurion, Google, Intuit, MongoDB, New Relic, Revolut and Salesforce.

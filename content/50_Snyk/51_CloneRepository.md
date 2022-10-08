@@ -14,8 +14,9 @@ Let's start by cloning a fresh copy of this public repository from GitHub.  In y
 
 ```bash
 cd ~/
-git clone https://github.com/gautambaghel/vulnerable-ec2
-cd vulnerable-ec2
+git clone https://github.com/schottsfired/nodejs-goof
+cd nodejs-goof
+git checkout live-hack
 ```
 
 {{% notice info %}}

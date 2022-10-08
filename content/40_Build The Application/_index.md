@@ -1,5 +1,5 @@
 ---
-title: "Module 1: HashiCorp terraform"
+title: "Build The Application"
 chapter: true
 weight: 40
 ---
