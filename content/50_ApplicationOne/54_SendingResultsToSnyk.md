@@ -8,7 +8,7 @@ weight: 54
 Either using the Snyk CLI lets send our results to the Snyk Web UI to look for open source libraries that could be causing the problem we observed.
 
 
-At your command prompt, ensure you are authorized with Snyk by issuing the command below.  In the setup steps, you were asked to get the API_TOKEN from snyk.io.  See the [Snyk setup page for those instructions.]({{<ref "30_Partner-Setup/33_SnykSetup.md" >}})
+At your command prompt, ensure you are authorized with Snyk by issuing the command below.  In the setup steps, you were asked to get the API_TOKEN from snyk.io.  See the [Snyk setup page for those instructions.]({{<ref "30_Partner-Setup/_index.md" >}})
 
 ```bash
 snyk auth
@@ -34,3 +34,6 @@ Filter the report to just look for 'directory traversal' vulnerabilities
 The vulnerability we want to fix is introduced by 'st@0.2.4' and we can see from the information in Snyk that this can be fixed by upding this package.
 
 ![snyk-project-entry](/images/snykreport2.jpg)
+
+
+WE ALSO HAVE THE K*S INTEGRATION TO LOOK AT _ ADD THIS IN

@@ -15,8 +15,6 @@ Classed as [CWE 22](https://cwe.mitre.org/data/definitions/22.html) a Directory 
 Before you read on try a few ways to hack the application so that you can see the file listing outside of the public directoy!
 
 
-Prove we can no longer hack the application
-
 ![Website hack](/images/hack.jpg)
 
 

@@ -19,12 +19,16 @@ Create a new repository in ECR and copy the URI of the repository to use later.
 ![ECR repository](/images/ecruri.jpg)
 
 
+Authorise Docket to interact with ECR
+
+```bash
+aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin {Your ECR URI}
+```
+
 Build the app and push it to ECR using the provided script:
 
 ```bash
-aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin {Your ECR URI}}
-
-DOCKER_ACCOUNT=478468688580.dkr.ecr.us-east-1.amazonaws.com ./imagebuild.sh
+DOCKER_ACCOUNT={Your ECR URI} ./imagebuild.sh
 ```
 
 <strong>OR</strong> build and push the container using the commands

@@ -15,22 +15,22 @@ Who should take this workshop?
 * Developers
 * DevOps Engineers
 * Solutions Architects
-* Site Reliability Engineers (SREs)
 * Anyone that wants to learn more about security!
 
 ## Workshop Structure
 
 In this workshop, we'll perform activities related to the creation and deployment cloud resources managed by Infrastructure as Code.  
 
-When we scan those resources for vulnerable misconfigurations, we'll also observe exploits in our running environment before and after we fix them.  The outline below summarizes what we'll be covering in this workshop.
+We will deploy a vunerable application and will hack the application for a known vulnerability. 
+Using the Snyk platform we will identify the vulnerability, fix the issue then prove the application is no longer vulnerable.
+
 <br>
 
 - Prerequisites **(15 minutes)**
-- Module 1: Build the application  **(30 minutes)**
-- Module 2: Deploying an application to ECS **(30 minutes)**
-- Module 3: Scanning the application for vunlerabilites **(30 minutes)**
-- Module 4: Fixing application vulnerabilities **(30 minutes)**
-- Module 5: Implementing security checking into your DevOps pipeline **(30 minutes)**
+- Module 1: Build, deploy, hack and fix a demo App with open source vulnerabilities  **(90 minutes)**
+- Module 2: Build, deploy, hack and fix a demo App with container vulnerabilities  **(60 minutes)**
+- Module 3: Deploy Snyk checks into CodePipline **(30 minutes)**
+- Module 4: Conclusion **(30 minutes)**
 
 
 {{% notice warning %}}
