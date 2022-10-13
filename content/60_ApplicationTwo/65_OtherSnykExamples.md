@@ -30,7 +30,6 @@ Update the line of code here in java-goof.yaml
 - image: 478468688580.dkr.ecr.eu-west-2.amazonaws.com/java-goof:fixed
 ```
 
-
 to reflect the name of your repo and image/tag.
 
 Update the app to your EKS clustor
@@ -38,9 +37,5 @@ Update the app to your EKS clustor
 ```bash
 aws eks --region eu-west-2 update-kubeconfig --name nodejs-goof
 
-kubectl create namespace nodejs-goof
-
-kubectl config set-context --current --namespace=nodejs-goof
-
-kubectl apply -f nodejs-goof-k8s.yaml
+kubectl apply -f java-goof.yaml
 ```

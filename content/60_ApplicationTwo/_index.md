@@ -1,5 +1,5 @@
 ---
-title: "Module 1: Vulnerable App 2"
+title: "Module 2: Vulnerable App 2"
 chapter: true
 weight: 60
 ---
