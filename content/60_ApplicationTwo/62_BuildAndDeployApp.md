@@ -20,25 +20,27 @@ Create a new repository in ECR and copy the URI of the repository to use later.
 ![ECR repository](/images/ecruri.jpg)
 
 
-Authorise Docker to interact with ECR
+Select the repository radio box in the list and click on 'View push commands'
+
+Follow the instructions from 1 to 4 to build and push your docker container to the ECR
+
+Build the container and push it to ECR using the provided script:
 
 ```bash
-aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin {Your ECR URI}
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin {Your URI}
+
+docker build -t nodejs-goof .
+
+docker tag nodejs-goof:latest {Your URI}:latest
+
+docker push {Your URI}:latest
+
 ```
 
-Build the app and push it to ECR using the provided script:
 
-```bash
-DOCKER_ACCOUNT={Your ECR URI} ./imagebuild.sh
-```
+In the Cloud9 editor open the file java-goof.yaml
 
-<strong>OR</strong> build and push the container using the commands
-
-```bash
-docker build -t {Your ECR URI}:latest .
-
-docker push {Your ECR URI}:latest
-```
+![snyk-project-entry](/images/editfile.jpg)
 
 Update the line in java-goof.yaml to point to your container
 
@@ -55,15 +57,17 @@ kubectl config set-context --current --namespace=java-goof
 kubectl apply -f java-goof.yaml
 ```
 
-Check the app is working by connecting localy using port forarding 
+
+Find the public URL of the load balancer
 
 
 ```bash
-kubectl port-forward svc/goof 8088:3001
-
-http://localhost:8080/todolist/
+kubectl get svc --all-namespaces
 ```
 
+e.g. http://ab4000884979e4a72b7b1fefd2f115cd-1598805025.us-east-1.elb.amazonaws.com/
+
+navigate to the app in a browser window
 
 
 ## Next: Hacking the application <!-- TODO: MODIFY the body -->

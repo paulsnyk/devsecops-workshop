@@ -13,16 +13,35 @@ We'll make changes to your local checkout, but not commit.  This process mirrors
 Let's start by cloning a fresh copy of this public repository from GitHub.  In your working environment, run these commands to start from your home directory and perform a clone of the repository:
 
 ```bash
-cd ~/
 git clone https://github.com/schottsfired/nodejs-goof
 cd nodejs-goof
 git checkout live-hack
 ```
 
 {{% notice info %}}
-Note: If you have an existing Snyk account with more than one organization, and you wish to use a non-default org, you can set this.  Find your org ID (ORG_ID below) and it with the command below.  Your desired ORG_ID should be a 32 character UUID unique to you.
+Note: If you have an existing Snyk account with more than one organization, and you wish to use a non-default org, you can set this.  Find your org ID (ORG_ID below) and it with the command below.Your desired ORG_ID should be a 32 character UUID unique to you.
 {{% /notice %}}
 
 ```
-snyk config set org=ORG_ID
+curl https://static.snyk.io/cli/latest/snyk-linux -o snyk
+chmod +x ./snyk
+sudo mv ./snyk /usr/local/bin/
 ```
+
+Head over to the Snyk UI and create a service account named 'snyk CLI'
+
+Authenticate the Snyk CLI with the below command
+
+```
+snyk auth {API Key}
+```
+
+Navigate into the nodejs-goof folder and run a Snyk test to check all is working.
+
+```
+cd nodejs-goof
+snyk test
+```
+
+![snyk-project-entry](/images/snykscan.jpg)
+
