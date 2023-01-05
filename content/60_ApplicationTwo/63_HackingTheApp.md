@@ -17,18 +17,32 @@ goto the exploiits folder
 
 
 ```bash
-source tomcat-rce.sh
+source tomcat-rce.sh {your loadbalancer url}
 
 check
-
-pwn
-
-
-http://localhost:8080/pwn.jsp
 ```
 
+Running 'check' uploads a jsp file to the server.
+we can view this file by navigating to 
 
-do some commands
+```bash
+{your loadbalancer url}Poc.jsp
+```
+
+We can now upload a jsp file that will allow us to run any commands on the server
+
+to do this run
+
+```bash
+pwn
+```
+
+Then navigating to 
+
+```bash
+{your loadbalancer url}pwn.jsp
+```
+
 
 
 ## Next: Scan with Snyk

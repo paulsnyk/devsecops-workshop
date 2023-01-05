@@ -5,32 +5,37 @@ weight: 64
 ---
 
 # Scanning the app with Snyk
-Either using the Snyk CLI lets send our results to the Snyk Web UI to look for open source libraries that could be causing the problem we observed.
+We do not want to install Java and Maven and start building the Java app on our Cloud9 environment, you may do so if you wish!
+
+Instead we are going to fork the java-goof repository and scan using the Snyk SCM integration 
+
+Using a source code management tool of your choice, fork the repository - https://github.com/schottsfired/java-goof
 
 
-At your command prompt, ensure you are authorized with Snyk by issuing the command below.  In the setup steps, you were asked to get the API_TOKEN from snyk.io.  See the [Snyk setup page for those instructions.]({{<ref "30_Partner-Setup/_index.md" >}})
+Head over to the Snyk UI, import and scan the repository.
 
-```bash
-snyk auth
-```
+Open the project for the Dockerfile in todolist-goof
 
-Once you are authorized, we'll run the 'monitor' command.
-
-```bash
-snyk monitor
-```
-
-Snyk will scan the application and post the vulnerability results to the web UI
-
-![snyk-project-entry](/images/monitor.jpg)
-
-Copy-and-paste the link, or click through the link if your CLI supports it.  When you navigate to Snyk you'll arrive at a list of projects for your organization.  If this is your first time using Snyk, you will only see one project entry.  If you are an existing user, you will see the name of your project .
-
-Filter the report to just look for 'directory traversal' vulnerabilities
-
-![snyk-project-entry](/images/snykreport1.jpg)
+![snyk-project-entry](/images/java-goof-docker-project.jpg)
 
 
-The vulnerability we want to fix is introduced by 'st@0.2.4' and we can see from the information in Snyk that this can be fixed by upding this package.
+The scan report for the Dockerfile is displayed in Snyk.
 
-![snyk-project-entry](/images/snykreport2.jpg)
+{{% notice tip %}}
+Please note we are scanning the Dockerfile here and not a container image.
+Snyk can also scan container images either locally or in integrated container registries
+{{% /notice %}}
+
+
+![snyk-project-entry](/images/java-goof-docker-scan.jpg)
+
+
+We can see from this scan that the base image for the container is out of date and there are better alternatives.
+
+Currently the best minor upgrade is to use tomcat:8.5.81
+
+{{% notice tip %}}
+Upgrades are classified as minor when only a minor semantic version is incremented.
+
+We use minor upgrades as these often require less development work to implement and remove the vulnerabilities at the same time
+{{% /notice %}}

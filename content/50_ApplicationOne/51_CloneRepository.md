@@ -15,7 +15,7 @@ Let's start by cloning a fresh copy of this public repository from GitHub.  In y
 ```bash
 git clone https://github.com/schottsfired/nodejs-goof
 cd nodejs-goof
-git checkout live-hack
+git checkout live-hack-public
 ```
 
 {{% notice info %}}

@@ -23,14 +23,13 @@ Select the repository radio box in the list and click on 'View push commands'
 
 Follow the instructions from 1 to 4 to build and push your docker container to the ECR
 
-Build the container and push it to ECR using the provided script:
 
 ```bash
-aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin {Your URI}
+aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin {Your URI}
 
-docker build -t nodejs-goof .
+docker build -t eksworkshop .
 
-docker tag nodejs-goof:latest {Your URI}:latest
+docker tag eksworkshop:latest {Your URI}:latest
 
 docker push {Your URI}:latest
 
@@ -49,7 +48,7 @@ Add the app to your EKS clustor
 
 
 ```bash
-aws eks --region eu-west-2 update-kubeconfig --name nodejs-goof
+aws eks --region eu-west-1 update-kubeconfig --name eksworkshop-eksctl
 
 kubectl create namespace nodejs-goof
 

@@ -7,6 +7,11 @@ weight: 20
 Navigate to EKS, and copy the cluster name.
 ![eks](/images/eks-page.png)
 
+Get the ARN for your 'eksworkshop-admin' Role
+
+![eks](/images/eksworkshopiam.jpg)
+
+
 Update or generate the kubeconfig file using the following command.
 
 ```sh

@@ -15,9 +15,9 @@ cd java-goof
 cd todolist-goof
 ```
 
-Create a new repository in ECR and copy the URI of the repository to use later.
+Create a new ECR repository 'eksworkshop-java'
 
-![ECR repository](/images/ecruri.jpg)
+![ECR repository](/images/eksworkshop-java.jpg)
 
 
 Select the repository radio box in the list and click on 'View push commands'
@@ -27,11 +27,11 @@ Follow the instructions from 1 to 4 to build and push your docker container to t
 Build the container and push it to ECR using the provided script:
 
 ```bash
-aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin {Your URI}
+aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin {Your URI}
 
-docker build -t nodejs-goof .
+docker build -t eksworkshop-java .
 
-docker tag nodejs-goof:latest {Your URI}:latest
+docker tag eksworkshop-java:latest {Your URI}:latest
 
 docker push {Your URI}:latest
 
@@ -40,7 +40,7 @@ docker push {Your URI}:latest
 
 In the Cloud9 editor open the file java-goof.yaml
 
-![snyk-project-entry](/images/editfile.jpg)
+![snyk-project-entry](/images/editfile-java.jpg)
 
 Update the line in java-goof.yaml to point to your container
 
@@ -48,13 +48,13 @@ Update the line in java-goof.yaml to point to your container
 Add the app to your EKS clustor
 
 ```bash
-aws eks --region eu-west-2 update-kubeconfig --name nodejs-goof
+aws eks --region eu-west-1 update-kubeconfig --name eksworkshop-eksctl
 
 kubectl create namespace java-goof
 
 kubectl config set-context --current --namespace=java-goof
 
-kubectl apply -f java-goof.yaml
+kubectl apply -f k8s/java-goof.yaml
 ```
 
 
