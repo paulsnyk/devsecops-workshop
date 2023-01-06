@@ -36,6 +36,5 @@ Currently the best minor upgrade is to use tomcat:8.5.81
 
 {{% notice tip %}}
 Upgrades are classified as minor when only a minor semantic version is incremented.
-
-We use minor upgrades as these often require less development work to implement and remove the vulnerabilities at the same time
+We use minor upgrades as these often require less development work to implement and remove the vulnerabilities at the same time.
 {{% /notice %}}

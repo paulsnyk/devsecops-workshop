@@ -6,27 +6,64 @@ weight: 71
 
 ### Introduction
 
-Up until now, we have been going through various steps to setup our environment. Installing tools and other necessary steps to make sure we progress through the modules without any issues. Now, we are ready to begin deploying the infrastructure that will support our Unicorn Store application. 
+We are going to push this repository to CodeCommit then setup a CodePipeline to run on every commit
 
 ### Basic Services CloudFormation Stack
 
-We are going to setup some basic services such as an AWS CodeCommit and Amazon ECR services.  
+Goto CodeCommit and create a repository call eks-workshop
 
-{{% notice info %}}
-This step takes approximately 2 minutes 
-{{% /notice %}}
+Copy the clone URL
 
-Copy and paste the following into Cloud9's terminal to launch a CloudFormation stack
+![snyk-project-entry](/images/codepipline-1.jpg)
+
+
+
+Set the local Git repo in the nodejs-goof folder to use your new repo as the remote
+
 ```bash
-cd ~/environment/modernization-workshop/modules/30_workshop_app
-
-aws cloudformation create-stack --stack-name WorkshopServices --template-body file://services.yaml --capabilities CAPABILITY_NAMED_IAM
-
-until [[ `aws cloudformation describe-stacks --stack-name "WorkshopServices" --query "Stacks[0].[StackStatus]" --output text` == "CREATE_COMPLETE" ]]; do  echo "The stack is NOT in a state of CREATE_COMPLETE at `date`";   sleep 30; done && echo "The Stack is built at `date` - Please proceed"
+git remote set-url origin {Your Repo URL}
+git config --global credential.helper '!aws codecommit credential-helper $@'
+git config --global credential.UseHttpPath true
+git push origin  live-hack-public:live-hack-public
 ```
 
-The output should look like the window below
-<pre>
-The stack is NOT in a state of CREATE_COMPLETE at Sun Sep  8 05:53:33 UTC 2019
-The Stack is built at Sun Sep  8 05:54:04 UTC 2019 - Please proceed 
-</pre>
+Goto CodeCommit, click on Pipleine and 'Create pipeline'
+
+
+![snyk-project-entry](/images/codepipline-2.jpg)
+
+
+Configure your pipeline
+
+
+![snyk-project-entry](/images/codepipline-3.jpg)
+
+{{% notice tip %}}
+You can skip the build stage in this instance
+{{% /notice %}}
+
+
+Once the pipeline is created 'Edit' the pipeline
+
+Add a new 'stage' and 'action' choosing 'Snyk' from the 'Action provider'
+
+![snyk-project-entry](/images/codepipline-4.jpg)
+
+{{% notice tip %}}
+You will have to run through the OAuth authentication step to connect Snyk to CodePipeline
+{{% /notice %}}
+ 
+Click 'Save' and 'Release Change'
+
+The pipeline with automatically run again.
+
+![snyk-project-entry](/images/codepipline-5.jpg)
+
+Once the run is complete click on 'View in Snyk' to view the repost for the scan.
+
+![snyk-project-entry](/images/codepipline-6.jpg)
+
+This scan will now run on every commit, ensuring that you have a view of any vulnerabilities before you send the project live.
+
+
+

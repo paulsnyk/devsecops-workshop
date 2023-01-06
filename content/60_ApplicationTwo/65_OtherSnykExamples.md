@@ -6,16 +6,17 @@ weight: 65
 
 ## Fix and re-deploy the App
 
-update container to 
+Open the file Dockerfile in the todolist-goof folder.
+
+Change the FROM line to:
 
 ```bash
-
-FROM tomcat:8.5.51
+FROM tomcat:8.5.81
 ```
 
+![snyk-project-entry](/images/editfile-dockerfile.jpg)
 
-
-re-build and push the container useing the 'fixed' tag
+re-build and push the container using the 'fixed' tag
 
 ```bash
 docker build -t {Your ECR URI}:fixed .
