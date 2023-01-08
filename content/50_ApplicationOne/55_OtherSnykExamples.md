@@ -50,8 +50,9 @@ docker push {Your URI}:fixed
 
 In the Cloud9 editor, edit the file nodejs-goof-k8s.yaml to point to your new conatiner tag
 
-![snyk-project-entry](/images/editfile-fixed.jpg)
-
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/editfile-fixed.jpg" />
+</div>
 
 Update the app to your EKS clustor
 

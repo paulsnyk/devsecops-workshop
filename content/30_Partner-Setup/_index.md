@@ -10,23 +10,24 @@ You will need a Snyk account to run scans.  Snyk is available for free and all y
 ## Setting up your Snyk Account
 
 ### I do not have a Snyk account
-[You can register for a FREE account here.](https://app.snyk.io/signup/?utm_medium=Partner&utm_source=Atlassian&utm_campaign=Bitbucket-cloud-promo-Q1-2020)
+[You can register for a FREE account here.](https://app.snyk.io/signup)
 
 ### I already have a Snyk account
-[Log in to your account here.](https://app.snyk.io/signup/?utm_medium=Partner&utm_source=Atlassian&utm_campaign=Bitbucket-cloud-promo-Q1-2020)
+[Log in to your account here.](https://app.snyk.io/signup)
 
 ### Create Snyk Access Token
-- Visit your Snyk account (Account Settings > API Token section) (https://app.snyk.io/account)
-- In the KEY field, select click to show, then select and copy your API token from the field
-- Paste the token that appears on the screen in a safe location for use in future modules
+- Visit your Snyk account (Account Settings > Service Accounts) (https://app.snyk.io/org/webapp-xyz/manage/service-accounts)
+- Create a new Service Account and of role 'Org Admin'
+- Paste the token that appears on the screen in a safe location
+
 
 {{% notice warning %}}
 <p style='text-align: left;'>
-Your Snyk access token must be protected and not shared with unauthorized parties to prevent exposure and unauthorized access.
+Your Snyk API token must be protected and not shared with unauthorized parties to prevent exposure and unauthorized access.
 </p>
 {{% /notice %}}
 
-You can read more about Snyk Access Token from their docs here.
+You can read more about Snyk API Tokens from the docs here.
 
 ## Setting up the Snyk CLI
 
@@ -46,18 +47,7 @@ mv ./snyk /usr/local/bin/
 Next, authenticate with Snyk by typing in the command below:
 
 ```
-snyk auth
-```
-
-This command directs you to authenticate in a browser.  If your environment does not bring up a web browser, you can instead get your authorization token from the Snyk UI.
-
-Navigate to your Snyk Account (https://app.snyk.io/account), and get your API_TOKEN by clicking into your Account Settings -> API Token section.
-In the KEY field, click your “click to show” box to copy your API token.
-
-You can then run this command where API_TOKEN is the value you copied.
-
-```
-snyk auth API_TOKEN.
+snyk auth {YOUR_API_TOKEN}.
 ```
 
 That should be it!  Your response should look like the following:

@@ -43,5 +43,6 @@ cd nodejs-goof
 snyk test
 ```
 
-![snyk-project-entry](/images/snykscan.jpg)
-
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/snykscan.jpg" />
+</div>

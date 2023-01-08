@@ -16,8 +16,9 @@ Head over to the Snyk UI, import and scan the repository.
 
 Open the project for the Dockerfile in todolist-goof
 
-![snyk-project-entry](/images/java-goof-docker-project.jpg)
-
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/java-goof-docker-project.jpg" />
+</div>
 
 The scan report for the Dockerfile is displayed in Snyk.
 
@@ -26,9 +27,9 @@ Please note we are scanning the Dockerfile here and not a container image.
 Snyk can also scan container images either locally or in integrated container registries
 {{% /notice %}}
 
-
-![snyk-project-entry](/images/java-goof-docker-scan.jpg)
-
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/java-goof-docker-scan.jpg" />
+</div>
 
 We can see from this scan that the base image for the container is out of date and there are better alternatives.
 

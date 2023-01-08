@@ -1,24 +1,25 @@
 ---
-title: "Setup Basic Services"
+title: "Setup CodePipeline Scan"
 chapter: false
 weight: 71
 ---
 
 ### Introduction
 
-We are going to push this repository to CodeCommit then setup a CodePipeline to run on every commit
+We are going to push a repository to CodeCommit then setup a CodePipeline to run on every commit
 
-### Basic Services CloudFormation Stack
+### Creating a CodeCommit repository
 
-Goto CodeCommit and create a repository call eks-workshop
+Goto CodeCommit and create a repository call 'eks-workshop'
 
 Copy the clone URL
 
-![snyk-project-entry](/images/codepipline-1.jpg)
+<div style="padding-left: 15%;padding-right: 15%">
+  <img src="/images/codepipline-1.jpg" />
+</div>
 
 
-
-Set the local Git repo in the nodejs-goof folder to use your new repo as the remote
+Set the local Git repo in the nodejs-goof folder to use your new repo as the remote and push the repo to CodeCommit
 
 ```bash
 git remote set-url origin {Your Repo URL}
@@ -29,14 +30,16 @@ git push origin  live-hack-public:live-hack-public
 
 Goto CodeCommit, click on Pipleine and 'Create pipeline'
 
-
-![snyk-project-entry](/images/codepipline-2.jpg)
+<div style="padding-left: 15%;padding-right: 15%">
+  <img src="/images/codepipline-2.jpg" />
+</div>
 
 
 Configure your pipeline
 
-
-![snyk-project-entry](/images/codepipline-3.jpg)
+<div style="padding-left: 15%;padding-right: 15%">
+  <img src="/images/codepipline-3.jpg" />
+</div>
 
 {{% notice tip %}}
 You can skip the build stage in this instance
@@ -47,7 +50,9 @@ Once the pipeline is created 'Edit' the pipeline
 
 Add a new 'stage' and 'action' choosing 'Snyk' from the 'Action provider'
 
-![snyk-project-entry](/images/codepipline-4.jpg)
+<div style="padding-left: 15%;padding-right: 15%">
+  <img src="/images/codepipline-4.jpg" />
+</div>
 
 {{% notice tip %}}
 You will have to run through the OAuth authentication step to connect Snyk to CodePipeline
@@ -57,11 +62,15 @@ Click 'Save' and 'Release Change'
 
 The pipeline with automatically run again.
 
-![snyk-project-entry](/images/codepipline-5.jpg)
+<div style="padding-left: 15%;padding-right: 15%">
+  <img src="/images/codepipline-5.jpg" />
+</div>
 
 Once the run is complete click on 'View in Snyk' to view the repost for the scan.
 
-![snyk-project-entry](/images/codepipline-6.jpg)
+<div style="padding-left: 15%;padding-right: 15%">
+  <img src="/images/codepipline-6.jpg" />
+</div>
 
 This scan will now run on every commit, ensuring that you have a view of any vulnerabilities before you send the project live.
 

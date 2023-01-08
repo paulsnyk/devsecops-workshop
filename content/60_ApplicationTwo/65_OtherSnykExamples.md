@@ -14,7 +14,9 @@ Change the FROM line to:
 FROM tomcat:8.5.81
 ```
 
-![snyk-project-entry](/images/editfile-dockerfile.jpg)
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/editfile-dockerfile.jpg" />
+</div>
 
 re-build and push the container using the 'fixed' tag
 

@@ -14,9 +14,9 @@ Classed as [CWE 22](https://cwe.mitre.org/data/definitions/22.html) a Directory 
 
 Before you read on try a few ways to hack the application so that you can see the file listing outside of the public directoy!
 
-
-![Website hack](/images/hack.jpg)
-
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/hack.jpg" />
+</div>
 
 ## Next: Scan with Snyk
 In the next section, we will scan the aplication source with Snyk and see if we can fix the vulnerability.

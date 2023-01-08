@@ -26,7 +26,7 @@ Running 'check' uploads a jsp file to the server.
 we can view this file by navigating to 
 
 ```bash
-{your loadbalancer url}Poc.jsp
+{your loadbalancer url}/Poc.jsp
 ```
 
 We can now upload a jsp file that will allow us to run any commands on the server
@@ -40,7 +40,7 @@ pwn
 Then navigating to 
 
 ```bash
-{your loadbalancer url}pwn.jsp
+{your loadbalancer url}/pwn.jsp
 ```
 
 

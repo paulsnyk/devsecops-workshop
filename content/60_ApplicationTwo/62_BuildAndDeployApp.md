@@ -17,8 +17,9 @@ cd todolist-goof
 
 Create a new ECR repository 'eksworkshop-java'
 
-![ECR repository](/images/eksworkshop-java.jpg)
-
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/eksworkshop-java.jpg" />
+</div>
 
 Select the repository radio box in the list and click on 'View push commands'
 

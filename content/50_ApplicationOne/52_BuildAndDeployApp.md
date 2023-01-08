@@ -16,8 +16,9 @@ cd nodejs-goof
 
 Create a new repository in ECR and copy the URI of the repository to use later.
 
-![ECR repository](/images/ecruri.jpg)
-
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/ecruri.jpg" />
+</div>
 
 Select the repository radio box in the list and click on 'View push commands'
 
@@ -38,7 +39,9 @@ docker push {Your URI}:latest
 
 In the Cloud9 editor open the file nodejs-goof-k8s.yaml
 
-![snyk-project-entry](/images/editfile.jpg)
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/editfile.jpg" />
+</div>
 
 
 Update the line in nodejs-goof-k8s.yaml to point to your container

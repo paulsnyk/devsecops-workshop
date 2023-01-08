@@ -12,4 +12,6 @@ Try the same hack as previous but now we are not suseptable to CVE-2017-12617
 check
 ```
 
-![Website not hack](/images/java-check-passed.jpg)
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/java-check-passed.jpg" />
+</div>

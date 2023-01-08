@@ -15,9 +15,8 @@ Let's start by cloning a fresh copy of this public repository from GitHub.  In y
 Ensure you have navigated out of the 'nodejs-goof' directory from the previous example
 
 ```bash
-git clone https://github.com/schottsfired/java-goof
+git clone https://github.com/paulsnyk/java-goof
 cd java-goof
-git checkout live-hack
 ```
 
 {{% notice info %}}
