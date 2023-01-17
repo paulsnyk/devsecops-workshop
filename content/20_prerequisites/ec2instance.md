@@ -2,6 +2,7 @@
 title: "Attach the IAM role to your Workspace"
 chapter: false
 weight: 17
+hidden: true
 ---
 {{% notice info %}}
 If you are using the event account admin role is already attached to the instance and you can skip to the next step.

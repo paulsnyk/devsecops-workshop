@@ -41,13 +41,13 @@ At the Cloud9 prompt, enter these commands to download the binary for Linux and 
 ```
 curl https://static.snyk.io/cli/latest/snyk-linux -o snyk
 chmod +x ./snyk
-mv ./snyk /usr/local/bin/
+sudo mv ./snyk /usr/local/bin/
 ```
 
 Next, authenticate with Snyk by typing in the command below:
 
 ```
-snyk auth {YOUR_API_TOKEN}.
+snyk auth {YOUR_API_TOKEN}
 ```
 
 That should be it!  Your response should look like the following:

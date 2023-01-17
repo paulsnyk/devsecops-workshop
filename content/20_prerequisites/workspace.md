@@ -20,7 +20,7 @@ A list of supported browsers for AWS Cloud9 is found [here]( https://docs.aws.am
 
 
 {{% notice info %}}
-This workshop was designed to run in the **Oregon (us-west-2)** region. **Please don't
+This workshop was designed to run in the **London (eu-west-2)** region. **Please don't
 run in any other region.** Future versions of this workshop will expand region availability,
 and this message will be removed.
 {{% /notice %}}
@@ -56,42 +56,29 @@ When it comes up, customize the environment by:
 - You can close the **Welcome tab** and continue with the **terminal** for the next steps
 ![c9before](/images/prerequisites/cloud9-1.png)
 
-### Increase the disk size on the Cloud9 instance
 
-{{% notice note %}}
-The following command adds more disk space to the root volume of the EC2 instance that Cloud9 runs on. Once the command completes, we reboot the instance and it could take a minute or two for the IDE to come back online.
-{{% /notice %}}
+### Disable temporary Credentials
 
+Select the gear icon in the upper right (or else select the "9" icon>Preferences in the upper left)
+
+- Scroll down to "AWS Settings" in the "Preferences" tab
+- Under "Credentials", disable "AWS managed temporary credentials"
+- Close the "Preferences" tab
+- Close the "AWS Toolkit" tabs
+
+![c9before](/images/prerequisites/cloud9-tmp-cred.png)
+
+Open a new terminal tab by clicking the green "+" sign and selecting "New Terminal".
+
+- Copy and run this command:
 ```bash
-pip3 install --user --upgrade boto3
-export instance_id=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
-python -c "import boto3
-import os
-from botocore.exceptions import ClientError 
-ec2 = boto3.client('ec2')
-volume_info = ec2.describe_volumes(
-    Filters=[
-        {
-            'Name': 'attachment.instance-id',
-            'Values': [
-                os.getenv('instance_id')
-            ]
-        }
-    ]
-)
-volume_id = volume_info['Volumes'][0]['VolumeId']
-try:
-    resize = ec2.modify_volume(    
-            VolumeId=volume_id,    
-            Size=30
-    )
-    print(resize)
-except ClientError as e:
-    if e.response['Error']['Code'] == 'InvalidParameterValue':
-        print('ERROR MESSAGE: {}'.format(e))"
-if [ $? -eq 0 ]; then
-    sudo reboot
-fi
+aws s3 cp s3://ee-assets-prod-us-east-1/modules/3b406ca5c0ea4006bc8b954810da2625/v1/eksinit.sh . && chmod +x eksinit.sh && ./eksinit.sh ; source ~/.bash_profile
+
+```
+
+- Verify that you are able to access the cluster
+```bash
+kubectl get nodes
 
 ```
 

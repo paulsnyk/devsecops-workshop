@@ -1,6 +1,7 @@
 ---
 title: "Install Helm CLI"
 weight: 21
+hidden: true
 ---
 ## Install the Helm CLI
 

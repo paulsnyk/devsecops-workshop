@@ -2,6 +2,7 @@
 title: "Verify EKS connection"
 chapter: false
 weight: 20
+hidden: true
 ---
 
 Navigate to EKS, and copy the cluster name.
