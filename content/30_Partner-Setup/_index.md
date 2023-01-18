@@ -44,17 +44,29 @@ chmod +x ./snyk
 sudo mv ./snyk /usr/local/bin/
 ```
 
+
+Fetch your user Auth Token from the Snyk UI
+
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/user_settings.jpg" />
+</div>
+
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/user_settings2.jpg" />
+</div>
+
+
 Next, authenticate with Snyk by typing in the command below:
 
-```
-snyk auth {YOUR_API_TOKEN}
+```bash
+snyk auth {YOUR_AUTH_TOKEN}.
 ```
 
 That should be it!  Your response should look like the following:
 
-    snyk auth 12345678-abcd-efgh-1234head5678bead
+    snyk auth XXXXXXX-XXXX-XXXX-XXXXXXXXXXXXXXXX
 
-    Your account has been authenticated. Snyk is now ready to be used.
+Your account has been authenticated. Snyk is now ready to be used.
 
 
 ### Next Section: Running with Snyk

@@ -38,4 +38,4 @@ The vulnerability we want to fix is introduced by 'st@0.2.4' and we can see from
 
 <div style="padding-left: 10%;padding-right: 10%">
   <img src="/images/snykreport2.jpg" />
-</div>
+</div> 

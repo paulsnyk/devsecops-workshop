@@ -41,7 +41,9 @@ docker push {Your URI}:latest
 
 In the Cloud9 editor open the file java-goof.yaml
 
-![snyk-project-entry](/images/editfile-java.jpg)
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/editfile-java.jpg" />
+</div>
 
 Update the line in java-goof.yaml to point to your container
 

@@ -51,7 +51,10 @@ Add the app to your EKS clustor
 
 
 ```bash
-aws eks --region eu-west-1 update-kubeconfig --name eksworkshop-eksctl
+cd nodejs-goof
+
+
+aws eks --region eu-west-2 update-kubeconfig --name eksworkshop-eksctl
 
 kubectl create namespace nodejs-goof
 

@@ -18,30 +18,19 @@ cd nodejs-goof
 git checkout live-hack-public
 ```
 
-{{% notice info %}}
-Note: If you have an existing Snyk account with more than one organization, and you wish to use a non-default org, you can set this.  Find your org ID (ORG_ID below) and it with the command below.Your desired ORG_ID should be a 32 character UUID unique to you.
-{{% /notice %}}
+Build the project locally
 
-```
-curl https://static.snyk.io/cli/latest/snyk-linux -o snyk
-chmod +x ./snyk
-sudo mv ./snyk /usr/local/bin/
+```bash
+npm install
 ```
 
-Head over to the Snyk UI and create a service account named 'snyk CLI'
-
-Authenticate the Snyk CLI with the below command
+Scan the code locally
 
 ```
-snyk auth {API Key}
-```
-
-Navigate into the nodejs-goof folder and run a Snyk test to check all is working.
-
-```
-cd nodejs-goof
 snyk test
 ```
+
+The Snyk results show vulnerabilities and license compliance issues found in the project being scanned
 
 <div style="padding-left: 10%;padding-right: 10%">
   <img src="/images/snykscan.jpg" />
