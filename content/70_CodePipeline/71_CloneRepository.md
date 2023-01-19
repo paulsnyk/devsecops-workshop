@@ -20,7 +20,7 @@ Copy the clone URL
 
 
 Set the local Git repo in the nodejs-goof folder to use your new repo as the remote and push the repo to CodeCommit
-
+ 
 ```bash
 git remote set-url origin {Your Repo URL}
 git config --global credential.helper '!aws codecommit credential-helper $@'
@@ -42,7 +42,7 @@ Configure your pipeline
 </div>
 
 {{% notice tip %}}
-You can skip the build stage in this instance
+You can skip the deploy stage for this demonstration
 {{% /notice %}}
 
 
@@ -54,9 +54,14 @@ Add a new 'stage' and 'action' choosing 'Snyk' from the 'Action provider'
   <img src="/images/codepipline-4.jpg" />
 </div>
 
-{{% notice tip %}}
-You will have to run through the OAuth authentication step to connect Snyk to CodePipeline
-{{% /notice %}}
+A snyk popup will appear <br />
+Run through the OAuth authentication step to connect Snyk to CodePipeline and configure the parameters
+
+<div style="padding-left: 15%;padding-right: 15%">
+  <img src="/images/snyk_connect.jpg" />
+</div>
+
+
  
 Click 'Save' and 'Release Change'
 
