@@ -27,10 +27,12 @@ Follow the instructions from 1 to 4 to build and push your docker container to t
 
 Build the container and push it to ECR using the provided script:
 
-```bash
-aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin {Your URI}
+THIS TIME YOU WILL NEED TO USE DOCKER_BUILDKIT=1 IN YOUR BUILD COMMAND
 
-docker build -t eksworkshop-java .
+```bash
+aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin {Your URI}
+
+DOCKER_BUILDKIT=1 docker build -t eksworkshop-java .
 
 docker tag eksworkshop-java:latest {Your URI}:latest
 
@@ -51,7 +53,7 @@ Update the line in java-goof.yaml to point to your container
 Add the app to your EKS clustor
 
 ```bash
-aws eks --region eu-west-1 update-kubeconfig --name eksworkshop-eksctl
+aws eks --region eu-west-2 update-kubeconfig --name eksworkshop-eksctl
 
 kubectl create namespace java-goof
 
@@ -70,7 +72,10 @@ kubectl get svc --all-namespaces
 
 e.g. http://ab4000884979e4a72b7b1fefd2f115cd-1598805025.us-east-1.elb.amazonaws.com/
 
-navigate to the app in a browser window
+navigate to the app in a browser window and use the URL above with /todolist/ added to the end
+
+e.g. http://ab4000884979e4a72b7b1fefd2f115cd-1598805025.us-east-1.elb.amazonaws.com/todolist
+
 
 
 ## Next: Hacking the application <!-- TODO: MODIFY the body -->

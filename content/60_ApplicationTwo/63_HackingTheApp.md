@@ -17,7 +17,7 @@ goto the exploiits folder
 
 
 ```bash
-source tomcat-rce.sh {your loadbalancer url}
+source tomcat-rce.sh http://{your loadbalancer url}
 
 check
 ```
