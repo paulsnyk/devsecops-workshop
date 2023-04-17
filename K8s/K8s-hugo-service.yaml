@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: apjaws-hugo-service
+  namespace: apjaws
+  labels:
+    name: apjaws-hugo-service
+spec:
+  ports:
+    - port: 80
+      targetPort: 1313
+      protocol: TCP
+  selector:
+    app: apjaws-hugo
+  type: LoadBalancer

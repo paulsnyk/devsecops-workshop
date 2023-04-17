@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apjaws-hugo
+  namespace: apjaws
+spec:
+  selector:
+    matchLabels:
+      app: apjaws-hugo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: apjaws-hugo
+    spec:
+      containers:
+        - name: apjaws-hugo
+          image: l0zcr0wth3r/aws-ws:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 1313
