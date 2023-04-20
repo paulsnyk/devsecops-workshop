@@ -34,7 +34,7 @@ We will resolve this by entering an IP range from which traffic is allowed.
 * Go to **sourcecontrol**
 * **Commit** and **Push** changes
 
-![alt tag](https://i.ibb.co/r5Z7YZB/snyk-iac-remediation-7.png)
+![alt tag](https://i.ibb.co/Sx9m9HY/snyk-iac-remediation-7.png)
 
 * In the Snyk UI review the **vpc.json** project again. "**Security Group allows open ingress**" has been remediated and is no longer an issue.
 
