@@ -19,5 +19,5 @@ Before you read on try a few ways to hack the application so that you can see th
 
 
 ## Next: Scan with Snyk
-In the next section, we will scan the aplication source with Snyk and see if we can fix the vulnerability.
+In the next section, we will scan the application source with Snyk and see if we can fix the vulnerability.
 

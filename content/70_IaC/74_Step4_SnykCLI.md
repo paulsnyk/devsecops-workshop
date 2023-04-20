@@ -113,13 +113,9 @@ Tested vpc.json for known issues, found 11 issues
 Tested 2 projects, 2 contained issues.
 ```
 
-Go ahead and fix others if you have time and optionally commit your changes back to the GitHub repo if you like.
+Review the results to get an idea of the types of IaC vulnerabilities that Snyk alerts on.
 
-* To output the test format as JSON issue a command as follows. This provides more detailed information including links to issue references as well as the ability to upload the data into other system for reporting purposes.
+The next exercise will show how to use the Snyk UI to remediate an IaC issue.
 
-```bash
-$ snyk iac test ./CloudFormation --json
-```
-
-For more information on AWS Cloud Formation scanning with Snyk see the following blog post
+For more information on AWS CloudFormation scanning with Snyk see the following blog post
 [Scan for AWS CloudFormation misconfigurations with Snyk IaC](https://snyk.io/blog/scan-aws-cloudformation-misconfigurations-snyk-iac/)

@@ -22,15 +22,15 @@ __Note: Once complete you should see various IaC scans as shown below_
 
 ![alt tag](https://i.ibb.co/YNC5rfd/snyk-iac-2.png)
 
-* Go ahead and click on "**big_data.tf**" terraform file as shown below
+* Go ahead and click on "**vpc.json**" CloudFormation file as shown below
 
 ![alt tag](https://i.ibb.co/DKY911V/snyk-iac-3.png)
 
 For each Vulnerability, Snyk displays the following ordered by Line no:
 
 1. Each Vulnerability grouped by line no and severity
-1. Each Vulnerability links to the Snyk policy it was defined against including the path to the issue, what the issue is, the impact and how to resolve it
-1. The ability to ignore issues you wish to remove from the list
+2. Each Vulnerability links to the Snyk policy it was defined against including the path to the issue, what the issue is, the impact and how to resolve it
+3. The ability to ignore issues you wish to remove from the list
 
 ![alt tag](https://i.ibb.co/3dJHzrm/snyk-iac-4.png)
 
