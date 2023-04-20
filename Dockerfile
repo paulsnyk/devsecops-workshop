@@ -1,4 +1,3 @@
-# Use the latest Hugo image
 FROM klakegg/hugo:0.71.0-ext-ubuntu
 
 # Set the working directory to /app

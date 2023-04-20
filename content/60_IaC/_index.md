@@ -1,7 +1,7 @@
 ---
-title: "Module 3: Secure IaC"
+title: "Module 2: Secure IaC"
 chapter: true
-weight: 70
+weight: 60
 ---
 
 # Introduction to Snyk IaC Workshop

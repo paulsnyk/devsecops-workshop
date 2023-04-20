@@ -34,26 +34,28 @@ Update the st package line to use 0.2.5
     "validator": "^13.5.2"
 ```
 
-re-build and push the container useing the 'fixed' tag
+Again using the push commants from your ECS repository push commands re-build and push the container, this time using the 'fixed' tag
+
+**You may not need to perform the first line depending on the time taken
 
 ```bash
-docker build -t {Your ECR URI}:fixed .
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin {Your URI}
 
-docker push {Your ECR URI}:fixed
+docker build -t nodejs-goof .
+
+docker tag nodejs-goof:latest {Your URI}:fixed
+
+docker push {Your URI}:fixed
 ```
 
-d
-Update the line of code here - https://github.com/schottsfired/java-goof/blob/27f549ad83b76cd7a990e64e544a17e06c865b1f/todolist-goof/k8s/imagebuild.sh#L10-L14
-to reflect the name of your repo and image/tag.
+In the Cloud9 editor, edit the file nodejs-goof-k8s.yaml to point to your new conatiner tag
+
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/editfile-fixed.jpg" />
+</div>
 
 Update the app to your EKS clustor
 
 ```bash
-aws eks --region eu-west-2 update-kubeconfig --name nodejs-goof
-
-kubectl create namespace nodejs-goof
-
-kubectl config set-context --current --namespace=nodejs-goof
-
 kubectl apply -f nodejs-goof-k8s.yaml
 ```

@@ -1,7 +1,7 @@
 ---
 title: "Add Project to Snyk"
 chapter: true
-weight: 73
+weight: 63
 ---
 
 ## Step 3 Add project to find vulnerabilities

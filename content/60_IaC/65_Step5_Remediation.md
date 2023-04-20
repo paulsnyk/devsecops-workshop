@@ -1,7 +1,7 @@
 ---
 title: "IaC Issue Remediation"
 chapter: true
-weight: 75
+weight: 65
 ---
 
 ## Step 5 Use the Snyk UI to get remediation advice

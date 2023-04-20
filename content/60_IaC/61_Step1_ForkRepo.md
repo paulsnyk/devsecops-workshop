@@ -1,7 +1,7 @@
 ---
 title: "Fork the Repo"
 chapter: true
-weight: 71
+weight: 61
 ---
 ## Step 1 Fork a GitHub IaC repository
 

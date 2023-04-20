@@ -1,7 +1,7 @@
 ---
 title: "IaC Rules"
 chapter: true
-weight: 76
+weight: 66
 ---
 ## Step 6 View Snyk IaC Rules
 

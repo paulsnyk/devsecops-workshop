@@ -1,7 +1,7 @@
 ---
 title: "Configure GitHub"
 chapter: true
-weight: 72
+weight: 62
 ---
 
 ## Step 2 Configure GitHub Integration

@@ -16,35 +16,45 @@ cd nodejs-goof
 
 Create a new repository in ECR and copy the URI of the repository to use later.
 
-![ECR repository](/images/ecruri.jpg)
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/ecruri.jpg" />
+</div>
 
+Select the repository radio box in the list and click on 'View push commands'
 
-Authorise Docket to interact with ECR
+Follow the instructions from 1 to 4 to build and push your docker container to the ECR
+
 
 ```bash
-aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin {Your ECR URI}
+aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin {Your URI}
+
+docker build -t eksworkshop .
+
+docker tag eksworkshop:latest {Your URI}:latest
+
+docker push {Your URI}:latest
+
 ```
 
-Build the app and push it to ECR using the provided script:
 
-```bash
-DOCKER_ACCOUNT={Your ECR URI} ./imagebuild.sh
-```
+In the Cloud9 editor open the file nodejs-goof-k8s.yaml
 
-<strong>OR</strong> build and push the container using the commands
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/editfile.jpg" />
+</div>
 
-```bash
-docker build -t {Your ECR URI}:latest .
 
-docker push {Your ECR URI}:latest
-```
-
+Update the line in nodejs-goof-k8s.yaml to point to your container
 
 
 Add the app to your EKS clustor
 
+
 ```bash
-aws eks --region eu-west-2 update-kubeconfig --name nodejs-goof
+cd nodejs-goof
+
+
+aws eks --region eu-west-2 update-kubeconfig --name eksworkshop-eksctl
 
 kubectl create namespace nodejs-goof
 
@@ -53,14 +63,17 @@ kubectl config set-context --current --namespace=nodejs-goof
 kubectl apply -f nodejs-goof-k8s.yaml
 ```
 
-Check the app is working by connecting localy using port forarding 
+
+Find the public URL of the load balancer
 
 
 ```bash
-kubectl port-forward svc/goof 8088:3001
-
-http://localhost:8088
+kubectl get svc --all-namespaces
 ```
+
+e.g. http://ab4000884979e4a72b7b1fefd2f115cd-1598805025.us-east-1.elb.amazonaws.com/
+
+navigate to the app in a browser window
 
 
 

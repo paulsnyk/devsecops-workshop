@@ -1,7 +1,7 @@
 ---
 title: "Snyk CLI"
 chapter: true
-weight: 74
+weight: 64
 ---
 ## Step 4 Test using the Snyk CLI - AWS CloudFormation files
 
