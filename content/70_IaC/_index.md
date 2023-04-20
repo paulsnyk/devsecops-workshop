@@ -1,5 +1,5 @@
 ---
-title: "Module 3: IaC and Terraform"
+title: "Module 3: Secure IaC"
 chapter: true
 weight: 70
 ---

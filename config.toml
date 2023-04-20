@@ -64,10 +64,6 @@ name = "<i class='fas fa-chalkboard-teacher'></i> Snyk"
 url = "https://www.snyk.io/"
 weight = 24
 
-[[menu.shortcuts]]
-name = "<i class='fas fa-chalkboard-teacher'></i> HashiCorp"
-url = "https://www.hashicorp.com/"
-weight = 25
 
 [markup]
   defaultMarkdownHandler = "blackfriday"
