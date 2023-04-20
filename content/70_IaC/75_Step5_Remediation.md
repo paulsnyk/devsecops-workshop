@@ -4,7 +4,7 @@ chapter: true
 weight: 75
 ---
 
-## Step 5 Use the Snuk UI to get remediation advice
+## Step 5 Use the Snyk UI to get remediation advice
 
 Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as a Project.
 
