@@ -29,7 +29,7 @@ We will use Amazon Cloud9 to access our AWS accounts via the AWS CLI in this Wor
 
     Click the Create environment button
 
-    For the name use circleci-workshop, then click Next step
+    For the name use snyk-workshop, then click Next step
 
     Select the default instance type t2.micro
 

@@ -10,9 +10,6 @@ Now that you’ve cloned the repo to your working environment, we’ll build a t
 
 To build the container images, run the following commands (assuming you are cd’ed into the cloned goof repo directory):
 
-```bash
-cd nodejs-goof
-```
 
 Create a new repository in ECR and copy the URI of the repository to use later.
 
@@ -26,7 +23,7 @@ Follow the instructions from 1 to 4 to build and push your docker container to t
 
 
 ```bash
-aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin {Your URI}
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin {Your URI}
 
 docker build -t eksworkshop .
 
@@ -51,10 +48,7 @@ Add the app to your EKS clustor
 
 
 ```bash
-cd nodejs-goof
-
-
-aws eks --region eu-west-2 update-kubeconfig --name eksworkshop-eksctl
+aws eks --region us-west-2 update-kubeconfig --name eksworkshop-eksctl
 
 kubectl create namespace nodejs-goof
 

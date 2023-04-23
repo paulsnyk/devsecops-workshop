@@ -8,12 +8,6 @@ weight: 54
 Either using the Snyk CLI lets send our results to the Snyk Web UI to look for open source libraries that could be causing the problem we observed.
 
 
-At your command prompt, ensure you are authorized with Snyk by issuing the command below.  In the setup steps, you were asked to get the API_TOKEN from snyk.io.  See the [Snyk setup page for those instructions.]({{<ref "30_Partner-Setup/_index.md" >}})
-
-```bash
-snyk auth
-```
-
 Once you are authorized, we'll run the 'monitor' command.
 
 ```bash

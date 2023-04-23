@@ -15,20 +15,6 @@ You will need a Snyk account to run scans.  Snyk is available for free and all y
 ### I already have a Snyk account
 [Log in to your account here.](https://app.snyk.io/signup)
 
-### Create Snyk Access Token
-- Visit your Snyk account (Account Settings > Service Accounts) (https://app.snyk.io/org/webapp-xyz/manage/service-accounts)
-- Create a new Service Account and of role 'Org Admin'
-- Paste the token that appears on the screen in a safe location
-
-
-{{% notice warning %}}
-<p style='text-align: left;'>
-Your Snyk API token must be protected and not shared with unauthorized parties to prevent exposure and unauthorized access.
-</p>
-{{% /notice %}}
-
-You can read more about Snyk API Tokens from the docs here.
-
 ## Setting up the Snyk CLI
 
 The Snyk Command-Line-Interface (CLI) is highly portable and very popular with end users.  We’ll use the Snyk CLI in this workshop to collect and send results about your vulnerabilities.
