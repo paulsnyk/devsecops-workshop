@@ -13,7 +13,7 @@ weight: 1
 Welcome!
 In this workshop you will learn how to deploy AWS services with integrated Snyk application security scanning tools in the Application, Container, and EKS layers while also integrating into CodePipeline.
 
-We will take running applications which contain vulnerabilites and use the Snyk tools to fix and reploy with the vulnerabilities fixed.
+We will take running applications which contain vulnerabilites and use the Snyk tools to fix and re-deploy with the vulnerabilities fixed.
 
 ## Snyk
 Snyk is a Cloud Native Application Security solution that enables developers and security teams to find and automatically fix vulnerabilities in your source code, Infrastructure as code templates, container images, kubernetes applications, and open source artifacts.
