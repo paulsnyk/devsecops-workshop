@@ -41,7 +41,7 @@ Configure your pipeline
   <img src="/images/codepipline-3.jpg" />
 </div>
 
-Add a dummy build step (you will need to creat new project)
+Add a dummy build step (you will need to create new project)
 
 <div style="padding-left: 15%;padding-right: 15%">
   <img src="/images/buildStep.png" />

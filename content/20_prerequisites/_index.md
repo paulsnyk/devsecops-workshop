@@ -6,9 +6,12 @@ weight: 20
 
 # Getting Started
 
-To start the workshop, follow one of the following depending on whether you are...
+To start the workshop, get the link from your hosts.
 
-* ...[running the workshop on your own (in your own account)](self_paced/), or
-* ...[attending an AWS hosted event (using AWS provided hashes)](aws_event/)
+Agree to terms and conditions and click 'Join Event'.
 
-Once you have completed with either setup, continue with [**Create a Workspace**](/20_prerequisites/workspace/)
+Open up AWS Console via the below link:
+
+<div style="padding-left: 15%;padding-right: 15%">
+  <img src="/images/aws_console.png" />
+</div>

@@ -3,13 +3,14 @@ title: "Snyk CLI"
 chapter: true
 weight: 64
 ---
-## Step 4 Test using the Snyk CLI - AWS CloudFormation files
 
-_Note: Please ensure you have the latest version of the Snyk CLI installed a version equal to or greater than the version below. https://docs.snyk.io/features/snyk-cli/install-the-snyk-cli_
+## Clone the repository
+
+Let's start by cloning a fresh copy of this public repository from GitHub.  In your working environment, run these commands to start from your home directory and perform a clone of the repository:
 
 ```bash
-$ snyk --version
-1.675.0
+git clone {YOUR_REPO_URL}
+cd snyk-iac-workshop
 ```
 
 Snyk tests and monitors CloudFormation files from source code repositories. It gives advice on how to better secure cloud environments by catching misconfigurations before they are pushed to production along with assistance on how best to fix them
