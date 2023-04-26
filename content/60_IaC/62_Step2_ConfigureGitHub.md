@@ -12,5 +12,4 @@ First we need to connect Snyk to GitHub so we can import our Repository. Do so b
 * Navigating to Integrations -> Source Control -> GitHub
 * Fill in your Account Credentials to Connect your GitHub Account.
 
-![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-1.png)
-
+![img.png](img.png)

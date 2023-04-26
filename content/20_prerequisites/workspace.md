@@ -30,3 +30,10 @@ Select the gear icon in the upper right (or else select the "9" icon>Preferences
 - Close the "AWS Toolkit" tabs
 
 ![c9before](/images/prerequisites/cloud9-tmp-cred.png)
+
+{{% notice warning %}}
+You **may** need to downgrade kubectl to v 1.21.1. Please follow these steps from the terminal: <br/>
+* curl -LO https://dl.k8s.io/release/v1.21.1/bin/linux/amd64/kubectl<br/>
+* sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl<br/>
+* verify it has worked - kubectl version --client<br/>
+{{% /notice %}}
