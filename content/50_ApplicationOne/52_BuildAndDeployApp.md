@@ -17,8 +17,6 @@ Create a new repository in ECR and copy the URI of the repository to use later.
   <img src="/images/ecruri.jpg" />
 </div>
 
-Select the repository radio box in the list and click on 'View push commands'
-
 Follow the instructions from 1 to 4 to build and push your docker container to the ECR
 
 
