@@ -10,23 +10,10 @@ You will need a Snyk account to run scans.  Snyk is available for free and all y
 ## Setting up your Snyk Account
 
 ### I do not have a Snyk account
-[You can register for a FREE account here.](https://app.snyk.io/signup/?utm_medium=Partner&utm_source=Atlassian&utm_campaign=Bitbucket-cloud-promo-Q1-2020)
+[You can register for a FREE account here.](https://app.snyk.io/signup)
 
 ### I already have a Snyk account
-[Log in to your account here.](https://app.snyk.io/signup/?utm_medium=Partner&utm_source=Atlassian&utm_campaign=Bitbucket-cloud-promo-Q1-2020)
-
-### Create Snyk Access Token
-- Visit your Snyk account (Account Settings > API Token section) (https://app.snyk.io/account)
-- In the KEY field, select click to show, then select and copy your API token from the field
-- Paste the token that appears on the screen in a safe location for use in future modules
-
-{{% notice warning %}}
-<p style='text-align: left;'>
-Your Snyk access token must be protected and not shared with unauthorized parties to prevent exposure and unauthorized access.
-</p>
-{{% /notice %}}
-
-You can read more about Snyk Access Token from their docs here.
+[Log in to your account here.](https://app.snyk.io/signup)
 
 ## Setting up the Snyk CLI
 
@@ -40,32 +27,33 @@ At the Cloud9 prompt, enter these commands to download the binary for Linux and 
 ```
 curl https://static.snyk.io/cli/latest/snyk-linux -o snyk
 chmod +x ./snyk
-mv ./snyk /usr/local/bin/
+sudo mv ./snyk /usr/local/bin/
 ```
+
+
+Fetch your user Auth Token from the Snyk UI
+
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/user_settings.jpg" />
+</div>
+
+<div style="padding-left: 10%;padding-right: 10%">
+  <img src="/images/user_settings2.jpg" />
+</div>
+
 
 Next, authenticate with Snyk by typing in the command below:
 
-```
-snyk auth
-```
-
-This command directs you to authenticate in a browser.  If your environment does not bring up a web browser, you can instead get your authorization token from the Snyk UI.
-
-Navigate to your Snyk Account (https://app.snyk.io/account), and get your API_TOKEN by clicking into your Account Settings -> API Token section.
-In the KEY field, click your “click to show” box to copy your API token.
-
-You can then run this command where API_TOKEN is the value you copied.
-
-```
-snyk auth API_TOKEN.
+```bash
+snyk auth {YOUR_AUTH_TOKEN}.
 ```
 
 That should be it!  Your response should look like the following:
 
-    snyk auth 12345678-abcd-efgh-1234head5678bead
+    snyk auth XXXXXXX-XXXX-XXXX-XXXXXXXXXXXXXXXX
 
-    Your account has been authenticated. Snyk is now ready to be used.
+Your account has been authenticated. Snyk is now ready to be used.
 
 
 ### Next Section: Running with Snyk
-Great, you have created and safely stored your newly created Snyk access token, Now, let’s create the Terraform Cloud access token.
+Great, you have created and safely stored your newly created Snyk access token.

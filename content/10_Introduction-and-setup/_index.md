@@ -27,10 +27,9 @@ Using the Snyk platform we will identify the vulnerability, fix the issue then p
 <br>
 
 - Prerequisites **(15 minutes)**
-- Module 1: Build, deploy, hack and fix a demo App with open source vulnerabilities  **(90 minutes)**
-- Module 2: Build, deploy, hack and fix a demo App with container vulnerabilities  **(60 minutes)**
-- Module 3: Deploy Snyk checks into CodePipline **(30 minutes)**
-- Module 4: Conclusion **(30 minutes)**
+- Module 1: Build, deploy, hack and fix a demo App with open source vulnerabilities  **(20 minutes)**
+- Module 2: Secure IaC  **(20 minutes)**
+- Module 3: Deploy Snyk checks into CodePipeline **(20 minutes)**
 
 
 {{% notice warning %}}
