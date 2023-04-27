@@ -56,4 +56,4 @@ Your account has been authenticated. Snyk is now ready to be used.
 
 
 ### Next Section: Running with Snyk
-Great, you have created and safely stored your newly created Snyk access token, Now, let’s create the Terraform Cloud access token.
+Great, you have created and safely stored your newly created Snyk access token.

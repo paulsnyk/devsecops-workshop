@@ -6,7 +6,7 @@ weight: 55
 
 ## Fix and re-deploy the App
 
-In any text editor open the App's package.json
+In Cloud9 open the App's package.json file
 
 ```bash
     "ms": "^0.7.1",
@@ -34,7 +34,13 @@ Update the st package line to use 0.2.5
     "validator": "^13.5.2"
 ```
 
-Again using the push commants from your ECS repository push commands re-build and push the container, this time using the 'fixed' tag
+Save the package.json file and run an npm install to update the lockfile
+
+```bash
+npm install
+```
+
+Again using the same push commands re-build and push the container, this time using the 'fixed' tag
 
 **You may not need to perform the first line depending on the time taken
 
@@ -48,7 +54,7 @@ docker tag nodejs-goof:latest {Your URI}:fixed
 docker push {Your URI}:fixed
 ```
 
-In the Cloud9 editor, edit the file nodejs-goof-k8s.yaml to point to your new conatiner tag
+In the Cloud9 editor, edit the file nodejs-goof-k8s.yaml to point to your new container tag
 
 <div style="padding-left: 10%;padding-right: 10%">
   <img src="/images/editfile-fixed.jpg" />

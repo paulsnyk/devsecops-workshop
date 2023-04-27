@@ -23,9 +23,9 @@ Follow the instructions from 1 to 4 to build and push your docker container to t
 ```bash
 aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin {Your URI}
 
-docker build -t eksworkshop .
+docker build -t nodejs-goof .
 
-docker tag eksworkshop:latest {Your URI}:latest
+docker tag nodejs-goof:latest {Your URI}:latest
 
 docker push {Your URI}:latest
 

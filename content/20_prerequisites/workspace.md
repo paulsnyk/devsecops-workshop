@@ -27,7 +27,6 @@ Select the gear icon in the upper right (or else select the "9" icon>Preferences
 - Scroll down to "AWS Settings" in the "Preferences" tab
 - Under "Credentials", disable "AWS managed temporary credentials"
 - Close the "Preferences" tab
-- Close the "AWS Toolkit" tabs
 
 ![c9before](/images/prerequisites/cloud9-tmp-cred.png)
 

@@ -5,7 +5,7 @@ weight: 54
 ---
 
 # Scanning the app with Snyk
-Either using the Snyk CLI lets send our results to the Snyk Web UI to look for open source libraries that could be causing the problem we observed.
+Using the Snyk CLI lets send our results to the Snyk Web UI to look for open source libraries that could be causing the problem we observed.
 
 
 Once you are authorized, we'll run the 'monitor' command.
