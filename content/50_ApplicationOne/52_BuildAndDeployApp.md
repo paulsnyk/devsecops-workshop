@@ -67,12 +67,12 @@ e.g. http://ab4000884979e4a72b7b1fefd2f115cd-1598805025.us-east-1.elb.amazonaws.
 
 navigate to the app in a browser window
 
-{{% notice warning %}}
-**Note** You may need to expose port 80 on the ELB <br/>
-ELB_SG=`aws ec2 describe-security-groups     --filters Name=group-name,Values=*eks-cluster*     --query "SecurityGroups[0].{ID:GroupId}" | jq -r '.ID'` <br/>
+<br/>
+**Note** You may need to expose port 80 on the ELB. If so run these commands:
+```
+ELB_SG=`aws ec2 describe-security-groups     --filters Name=group-name,Values=*eks-cluster*     --query "SecurityGroups[0].{ID:GroupId}" | jq -r '.ID'`
 aws ec2 authorize-security-group-ingress --group-id $ELB_SG --protocol tcp --port 80 --cidr 0.0.0.0/0 <br/>
-{{% /notice %}}
-
+```
 
 
 
