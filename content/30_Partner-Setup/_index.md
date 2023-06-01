@@ -5,7 +5,7 @@ weight: 30
 ---
 
 # Snyk Setup Instructions
-You will need a Snyk account to run scans.  Snyk is available for free and all you need is a valid email address to register.  Once you register, you can perform scans and view results locally or on the website.
+A Snyk account necessary to proceed with this workshop. Snyk is free forever, meaning you can continue using it after completing this workshop. Accounts on the free tier have a limited number of security scans, but it's sufficient for this workshop and potentially sufficient for long-term use by a single developer or small team.
 
 ## Setting up your Snyk Account
 
@@ -15,35 +15,33 @@ You will need a Snyk account to run scans.  Snyk is available for free and all y
 ### I already have a Snyk account
 [Log in to your account here.](https://app.snyk.io/signup)
 
-### Create Snyk Access Token
-- Visit your Snyk account (Account Settings > Service Accounts) (https://app.snyk.io/org/webapp-xyz/manage/service-accounts)
-- Create a new Service Account and of role 'Org Admin'
-- Paste the token that appears on the screen in a safe location
+### Create Service Account Token
+- Click on your username, then navigate to **Account Settings** then **Service Accounts**
+  - Your URL should look similar to: https://app.snyk.io/org/my-org-id/manage/service-accounts
+- Create a new Service Account using the **Org Admin** role
+- Copy and paste the token that appears on the screen to a safe location
 
-
-{{% notice warning %}}
+{{% notice tip %}}
 <p style='text-align: left;'>
-Your Snyk API token must be protected and not shared with unauthorized parties to prevent exposure and unauthorized access.
+Protect your Snyk API token and don't share it with unauthorized parties. This prevents exposure and unauthorized access.
 </p>
 {{% /notice %}}
 
-You can read more about Snyk API Tokens from the docs here.
+You can read more about Snyk service accounts from the docs [here](https://docs.snyk.io/enterprise-setup/service-accounts).
 
 ## Setting up the Snyk CLI
 
-The Snyk Command-Line-Interface (CLI) is highly portable and very popular with end users.  We’ll use the Snyk CLI in this workshop to collect and send results about your vulnerabilities.
+The Snyk command-line interface (CLI) is highly portable and very popular with end users.  We’ll use the Snyk CLI in this workshop to collect and analyze results about your vulnerabilities.
 
-Start by downloading the Snyk CLI to your environment.  In this workshop, we’ll prescribe steps to save time and you can find more details on the Snyk documentation site at:
-https://docs.snyk.io/snyk-cli/install-the-snyk-cli
+Start by downloading the Snyk CLI to your environment. In this workshop, we’ll prescribe steps to save time, but you can find more details on the Snyk CLI documentation site [here](https://docs.snyk.io/snyk-cli/install-the-snyk-cli).
 
-At the Cloud9 prompt, enter these commands to download the binary for Linux and move them to your bin folder (/usr/local/bin):
+In your Cloud9 terminal, copy and paste this command to install the Snyk CLI:
 
-```
-curl https://static.snyk.io/cli/latest/snyk-linux -o snyk
-chmod +x ./snyk
+```bash
+curl https://static.snyk.io/cli/latest/snyk-linux -o snyk && \
+chmod +x ./snyk && \
 sudo mv ./snyk /usr/local/bin/
 ```
-
 
 Fetch your user Auth Token from the Snyk UI
 
@@ -55,19 +53,17 @@ Fetch your user Auth Token from the Snyk UI
   <img src="/images/user_settings2.jpg" />
 </div>
 
-
 Next, authenticate with Snyk by typing in the command below:
 
 ```bash
-snyk auth {YOUR_AUTH_TOKEN}.
+snyk auth <YOUR_AUTH_TOKEN>
 ```
 
-That should be it!  Your response should look like the following:
+That's it! The output from this command should look similar to the following:
 
-    snyk auth XXXXXXX-XXXX-XXXX-XXXXXXXXXXXXXXXX
-
+```bash
 Your account has been authenticated. Snyk is now ready to be used.
+```
 
-
-### Next Section: Running with Snyk
-Great, you have created and safely stored your newly created Snyk access token, Now, let’s create the Terraform Cloud access token.
+### Next Section: Module 1
+You have installed the Snyk CLI into your Cloud9 IDE environment. Let's proceed to Module 1, where we deploy a vulnerable application, hack into it, scan it with Snyk, and fix security vulnerabilities.
